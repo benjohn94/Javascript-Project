@@ -60,6 +60,15 @@ document.addEventListener('DOMContentLoaded', function() {
     loadAppointments();
     setupEventListeners();
     setMinDate();
+    
+    // Smooth scrolling for all internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            scrollToSection(targetId);
+        });
+    });
 });
 
 // Load Doctors
@@ -312,12 +321,3 @@ function formatTime(timeString) {
     const displayHour = hour % 12 || 12;
     return `${displayHour}:${minutes} ${ampm}`;
 }
-
-// Smooth scrolling for all internal links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        scrollToSection(targetId);
-    });
-});
