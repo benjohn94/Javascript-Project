@@ -39,10 +39,20 @@ A modern, responsive healthcare management web application built with HTML, CSS,
 ```
 Javascript-Project/
 │
-├── index.html          # Main HTML file
-├── style.css           # CSS styling
-├── script.js           # JavaScript functionality
-└── README.md           # Project documentation
+├── frontend/
+│   ├── index.html          # Main HTML file
+│   ├── css/
+│   │   └── style.css       # CSS styling
+│   └── js/
+│       └── script.js       # JavaScript functionality
+│
+├── backend/                # Backend (ready for implementation)
+│   ├── src/                # Backend source code
+│   ├── config/             # Configuration files
+│   ├── package.json        # Backend dependencies
+│   └── README.md           # Backend documentation
+│
+└── README.md               # Project documentation
 ```
 
 ## Getting Started
@@ -63,7 +73,7 @@ git clone https://github.com/benjohn94/Javascript-Project.git
 cd Javascript-Project
 ```
 
-3. Open `index.html` in your web browser:
+3. Open `frontend/index.html` in your web browser:
    - Double-click the file, or
    - Right-click and select "Open with" your preferred browser, or
    - Use a local development server (optional)
@@ -159,7 +169,7 @@ Then navigate to `http://localhost:8000` in your browser.
 
 ### Adding New Doctors
 
-Edit the `doctors` array in `script.js`:
+Edit the `doctors` array in `frontend/js/script.js`:
 
 ```javascript
 const doctors = [
@@ -177,7 +187,7 @@ const doctors = [
 
 ### Changing Colors
 
-Edit CSS variables in `style.css`:
+Edit CSS variables in `frontend/css/style.css`:
 
 ```css
 :root {
@@ -189,7 +199,7 @@ Edit CSS variables in `style.css`:
 
 ### Adding Services
 
-Add new service cards in the `services-grid` section of `index.html`.
+Add new service cards in the `services-grid` section of `frontend/index.html`.
 
 ## Future Enhancements
 

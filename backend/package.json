@@ -1,0 +1,18 @@
+{
+  "name": "healthcare-plus-backend",
+  "version": "1.0.0",
+  "description": "Backend API for HealthCare Plus application",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "healthcare",
+    "appointment",
+    "api"
+  ],
+  "author": "",
+  "license": "ISC"
+}
